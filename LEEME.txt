@@ -1,0 +1,16 @@
+IRON TRANSFER - VERSION CON NOMBRE DE EVENTO EDITABLE
+
+1. Descomprimir la carpeta completa.
+2. Abrir index.html con Chrome o Firefox.
+3. Entrar en ADMINISTRACIÓN.
+4. Clave de demostración: iron-demo
+5. En CONFIGURACIÓN DEL EVENTO, escribir por ejemplo "Temporada 2", "Copa Iron" o "Copa de Acero".
+6. Pulsar GUARDAR NOMBRE. El título se actualiza en la cabecera y en la información de la pantalla principal.
+
+El nombre se guarda en el navegador usado (localStorage). Esta versión es una demostración local; todavía no tiene servidor ni base de datos compartida entre usuarios.
+
+
+ACTUALIZACIÓN COLOSO LEAGUE
+- Identidad visual principal actualizada al escudo de Coloso League.
+- Favicon actualizado con un recorte del escudo de Coloso.
+- El resto de las funciones de demostración se conserva.

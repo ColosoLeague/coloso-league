@@ -1,0 +1,46 @@
+COLOSO LEAGUE — INICIO DE BACKEND SEGURO
+
+ESTADO
+- El ZIP conserva el sitio actual.
+- Incluye supabase/schema.sql como primera estructura de base de datos.
+- La página todavía NO está conectada a Supabase: hace falta crear el proyecto y configurar sus claves públicas.
+- No subas claves secretas ni service_role al repositorio.
+
+PASO 1 — Crear Supabase
+1. Entrá en https://supabase.com/dashboard
+2. Creá una cuenta e iniciá un proyecto nuevo llamado coloso-league.
+3. Guardá la contraseña de la base de datos en un gestor seguro; no la envíes por chat.
+4. Esperá a que termine de aprovisionarse el proyecto.
+
+PASO 2 — Crear las tablas
+1. En el proyecto, abrí SQL Editor.
+2. Elegí New query.
+3. Abrí el archivo supabase/schema.sql de este ZIP, copiá todo y pegalo en SQL Editor.
+4. Ejecutá la consulta.
+5. Si aparece un error, no ejecutes fragmentos al azar: copiá el mensaje de error para revisarlo.
+
+PASO 3 — Datos de conexión públicos
+En Project Settings > API (o Data API / API Keys, según el panel):
+- Project URL: formato https://xxxx.supabase.co
+- Publishable key: empieza con sb_publishable_...
+  En proyectos antiguos puede aparecer una anon key.
+Estas dos cosas se usan en el navegador. NO compartas:
+- Secret key sb_secret_...
+- service_role
+- Contraseña de base de datos.
+
+PASO 4 — GitHub Pages
+1. Creá un repositorio GitHub para el sitio.
+2. Subí los archivos del ZIP (index.html, app.js, styles.css y assets).
+3. En Settings > Pages, elegí Deploy from a branch, rama main y carpeta /(root).
+4. GitHub te dará una URL tipo https://usuario.github.io/repositorio/.
+
+IMPORTANTE SOBRE PERMISOS
+- Las cuentas nuevas nacen como participant.
+- No se pueden autoconceder rol admin.
+- El administrador debe aprobar la pertenencia al club.
+- Las tablas expuestas tienen RLS y permisos mínimos como punto de partida.
+- Antes de abrir el sistema al público, se deben probar las políticas de lectura/escritura y revisar los casos de uso reales.
+- El primer admin se asigna manualmente desde SQL Editor:
+  update public.profiles set role = 'admin' where username = 'TU_USUARIO';
+  Cambiá TU_USUARIO por el usuario real registrado.

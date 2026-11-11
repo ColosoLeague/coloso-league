@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>COLOSO LEAGUE | Mercado oficial</title>
+<link rel="icon" type="image/png" href="assets/favicon-coloso.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="ambient"></div>
+<header class="topbar">
+  <a class="brand" href="#" data-page="inicio"><img src="assets/coloso-league.png" alt="Coloso League"><span><b>COLOSO</b> <em>LEAGUE</em><small>MERCADO OFICIAL · PES 6</small></span></a>
+  <div class="season"><span class="eyebrow">EVENTO ACTUAL</span><strong id="season">Temporada 1</strong></div>
+  <div class="countdown"><span class="live-dot"></span><div><small>EL EVENTO TERMINA EN</small><strong id="countdown">Configurar fecha de cierre</strong></div></div>
+  <div class="account-actions"><button class="login-shortcut" data-page="cuenta" id="accountButton">👤 INICIAR SESIÓN</button><button class="admin-shortcut" data-page="admin"><span class="lock-icon">🔒</span> <span>ADMINISTRACIÓN</span></button></div>
+</header>
+
+<nav class="main-nav">
+  <button class="nav-link active" data-page="inicio">⌂ <span>INICIO</span></button>
+  <button class="nav-link" data-page="clubes">♜ <span>CLUBES</span></button>
+  <button class="nav-link" data-page="jugadores">♟ <span>JUGADORES</span></button>
+  <button class="nav-link" data-page="tabla">▤ <span>TABLA DE POSICIÓN</span></button>
+  <button class="nav-link" data-page="venta">⇄ <span>JUGADORES EN VENTA</span></button>
+  <button class="nav-link" data-page="prestamos">⇆ <span>PRÉSTAMO / INTERCAMBIO</span></button>
+  <button class="nav-link" data-page="sorteo">✦ <span>SORTEO</span></button>
+  <button class="nav-link" data-page="notas">▣ <span>BLOC DE NOTAS</span></button>
+</nav>
+
+<main>
+<section class="page active" id="page-inicio">
+  <div class="welcome">
+    <div class="welcome-copy"><span class="eyebrow red">CENTRO DE OPERACIONES · PES 6</span>
+      <h1>EL MERCADO<br><span>DE COLOSO LEAGUE</span></h1>
+      <p>Gestioná tu club, seguí la temporada y movete en el mercado de fichajes.</p>
+      <button class="primary" data-page="venta">EXPLORAR MERCADO <b>→</b></button>
+    </div>
+    <div class="welcome-mark"><img src="assets/coloso-league.png" alt="Coloso League"></div>
+    <div class="welcome-stamp">PES 6<br><small>COMMUNITY</small></div>
+  </div>
+
+  <section class="home-news-section">
+    <div class="section-heading"><div><span class="eyebrow red">COMUNICADOS OFICIALES</span><h2>NOTICIAS DE COLOSO LEAGUE</h2></div><span class="section-line"></span></div>
+    <div id="newsPublic" class="news-grid home-news-grid"><div class="panel empty-state"><b>Todavía no hay noticias publicadas</b><small>Las novedades oficiales de la liga aparecerán acá.</small></div></div>
+  </section>
+
+  <div class="section-heading"><div><span class="eyebrow">ACCESOS RÁPIDOS</span><h2>GESTIONÁ TU EQUIPO</h2></div><span class="section-line"></span></div>
+  <div class="dashboard-grid">
+    <button class="feature-card" data-page="clubes"><span class="feature-icon">♜</span><span class="feature-title">CLUBES</span><small>Consultá los equipos de la liga</small><b class="card-arrow">ABRIR SECCIÓN ↗</b></button>
+    <button class="feature-card" data-page="jugadores"><span class="feature-icon">♟</span><span class="feature-title">JUGADORES</span><small>Plantillas, posiciones y estadísticas</small><b class="card-arrow">VER JUGADORES ↗</b></button>
+    <button class="feature-card featured" data-page="venta"><span class="feature-icon">⇄</span><span class="feature-title">JUGADORES EN VENTA</span><small>Encontrá refuerzos para tu plantel</small><b class="card-arrow">IR AL MERCADO ↗</b></button>
+    <button class="feature-card" data-page="prestamos"><span class="feature-icon">⇆</span><span class="feature-title">PRÉSTAMO O INTERCAMBIO</span><small>Negociá movimientos entre clubes</small><b class="card-arrow">NEGOCIAR ↗</b></button>
+    <button class="feature-card" data-page="sorteo"><span class="feature-icon">✦</span><span class="feature-title">SORTEO</span><small>Drop Player · Premio ruleta · Pago ruleta TOP</small><b class="card-arrow">VER SORTEOS ↗</b></button>
+    <button class="feature-card" data-page="tabla"><span class="feature-icon">▤</span><span class="feature-title">TABLA DE POSICIÓN</span><small>Seguí el rendimiento de los clubes</small><b class="card-arrow">VER TABLA ↗</b></button>
+  </div>
+
+  <div class="lower-grid">
+    <article class="panel"><div class="panel-head"><h3>ÚLTIMOS MOVIMIENTOS</h3><span class="pill">MERCADO</span></div><div class="empty-state"><span>⇄</span><b>Todavía no hay fichajes publicados</b><small>Los movimientos confirmados aparecerán en esta sección.</small></div></article>
+    <article class="panel"><div class="panel-head"><h3>INFORMACIÓN DE TEMPORADA</h3><span class="pill red-pill">EN CURSO</span></div><div class="season-info"><div><small>EVENTO</small><b id="seasonInfoName">Temporada 1</b></div><div><small>ESTADO</small><b class="red-text">ACTIVA</b></div><div><small>PRÓXIMO CIERRE</small><b id="closeDate">A definir</b></div></div></article>
+  </div>
+</section>
+
+<section class="page" id="page-clubes"><div class="section-heading"><div><span class="eyebrow">IRON LEAGUE</span><h2>CLUBES</h2></div></div><div class="panel"><p class="muted">Directorio de clubes participantes. Los escudos y nombres se podrán cargar desde administración.</p><div id="clubList" class="club-grid"><div class="empty-state"><b>Los clubes aparecerán aquí</b><small>El administrador podrá cargar y actualizar los equipos.</small></div></div></div></section>
+<section class="page" id="page-jugadores"><div class="section-heading"><div><span class="eyebrow">BASE DE DATOS</span><h2>JUGADORES</h2></div></div><div class="panel"><p class="muted">Buscá jugadores por nombre, club o posición.</p><input class="search" placeholder="Buscar jugador..." id="playerSearch"><div id="publicPlayerList" class="public-player-list"><div class="empty-state"><b>Base de jugadores</b><small>Los jugadores aparecerán cuando se carguen los datos.</small></div></div></div></section>
+<section class="page" id="page-tabla"><div class="section-heading"><div><span class="eyebrow">COMPETICIÓN</span><h2>TABLA DE POSICIÓN</h2></div></div><div class="panel"><div class="table-head"><span>POS.</span><span>CLUB</span><span>PJ</span><span>PTS</span></div><div class="empty-state"><b>Tabla todavía sin datos</b><small>Se actualizará con los resultados de la temporada.</small></div></div></section>
+<section class="page" id="page-venta">
+ <div class="section-heading"><div><span class="eyebrow">MERCADO DE PASES</span><h2>JUGADORES EN VENTA</h2></div></div>
+ <div class="panel market-publish-panel"><p class="muted">Publicá jugadores de tu club para que los demás equipos puedan verlos.</p>
+  <div id="saleLoginNotice" class="market-login-notice">Para publicar, iniciá sesión con tu cuenta de jugador.</div>
+  <div id="salePublishForm" class="market-form" hidden>
+   <h3>PUBLICAR JUGADOR EN VENTA</h3>
+   <label>Jugador de tu plantel<select id="salePlayerSelect"></select></label>
+   <label>Precio solicitado<input id="salePrice" type="number" min="0" placeholder="Ej.: 500000"></label>
+   <label>Detalles / condiciones<textarea id="saleDetails" rows="3" placeholder="Condiciones de la venta, forma de pago, etc."></textarea></label>
+   <button class="primary" id="publishSale">PUBLICAR EN VENTA</button><p id="salePublishMsg" class="muted"></p>
+  </div>
+ </div>
+ <div class="market-list-heading"><h3>JUGADORES DISPONIBLES</h3><span class="eyebrow">PUBLICACIONES DE LOS CLUBES</span></div>
+ <div id="saleListings" class="market-list"><div class="empty-state"><b>No hay jugadores publicados</b><small>Cuando un club publique una venta, aparecerá acá.</small></div></div>
+</section>
+<section class="page" id="page-prestamos">
+ <div class="section-heading"><div><span class="eyebrow">NEGOCIACIONES</span><h2>PRÉSTAMOS / INTERCAMBIOS</h2></div></div>
+ <div class="panel market-publish-panel"><p class="muted">Publicá jugadores disponibles para préstamo o intercambio.</p>
+  <div id="loanLoginNotice" class="market-login-notice">Para publicar, iniciá sesión con tu cuenta de jugador.</div>
+  <div id="loanPublishForm" class="market-form" hidden>
+   <h3>PUBLICAR DISPONIBILIDAD</h3>
+   <label>Tipo de operación<select id="loanKind"><option value="Préstamo">Préstamo</option><option value="Intercambio">Intercambio</option></select></label>
+   <label>Jugador de tu plantel<select id="loanPlayerSelect"></select></label>
+   <label>Condiciones<textarea id="loanDetails" rows="3" placeholder="Duración del préstamo, jugador que buscás a cambio, condiciones, etc."></textarea></label>
+   <button class="primary" id="publishLoan">PUBLICAR</button><p id="loanPublishMsg" class="muted"></p>
+  </div>
+ </div>
+ <div class="market-list-heading"><h3>PRÉSTAMOS E INTERCAMBIOS DISPONIBLES</h3><span class="eyebrow">PUBLICACIONES DE LOS CLUBES</span></div>
+ <div id="loanListings" class="market-list"><div class="empty-state"><b>No hay publicaciones activas</b><small>Las propuestas de los clubes aparecerán acá.</small></div></div>
+</section>
+<section class="page" id="page-sorteo">
+ <div class="section-heading"><div><span class="eyebrow">OPORTUNIDADES</span><h2>SORTEO</h2></div></div>
+ <p class="muted">Elegí una categoría para consultar sus sorteos y premios.</p>
+ <div class="draw-category-grid">
+  <button class="draw-category-card" type="button" data-draw-category="drop"><span class="draw-icon">🎯</span><b>DROP PLAYER</b><small>Sorteos de jugadores</small><em>ENTRAR ↗</em></button>
+  <button class="draw-category-card" type="button" data-draw-category="premio"><span class="draw-icon">🎁</span><b>PREMIO RULETA</b><small>Premios de la ruleta</small><em>ENTRAR ↗</em></button>
+  <button class="draw-category-card" type="button" data-draw-category="top"><span class="draw-icon">🏆</span><b>PAGO RULETA TOP</b><small>Sorteos especiales TOP</small><em>ENTRAR ↗</em></button>
+ </div>
+ <div class="panel draw-category-content" id="drawCategoryContent"><div class="empty-state"><span>✦</span><b>Seleccioná una categoría</b><small>Acá se mostrarán las publicaciones y sorteos de la categoría elegida.</small></div></div>
+</section>
+<section class="page" id="page-notas"><div class="section-heading"><div><span class="eyebrow">HERRAMIENTAS</span><h2>BLOC DE NOTAS</h2></div></div><div class="panel"><p class="muted">Anotá ideas, negociaciones pendientes o recordatorios.</p><textarea id="notes" class="notes" placeholder="Escribí tus notas..."></textarea><small class="muted">Las notas se guardan en este navegador.</small></div></section>
+
+<section class="page" id="page-cuenta"><div class="section-heading"><div><span class="eyebrow">ACCESO DE PARTICIPANTES</span><h2>CUENTA DE JUGADOR</h2></div></div><div class="panel account-panel"><div id="accountLoggedOut"><p class="muted">Iniciá sesión con tu cuenta o registrate para participar en el mercado y enviar movimientos a la administración.</p><div class="account-columns"><div><h3>INICIAR SESIÓN</h3><label>Usuario<input id="loginUsername" autocomplete="username" placeholder="Tu usuario"></label><label>Contraseña<input id="loginPassword" type="password" autocomplete="current-password" placeholder="Tu contraseña"></label><button class="primary" id="playerLogin">INGRESAR</button><p id="loginMessage" class="muted"></p></div><div><h3>CREAR CUENTA</h3><label>Usuario<input id="registerUsername" autocomplete="username" placeholder="Elegí un usuario"></label><label>Contraseña<input id="registerPassword" type="password" autocomplete="new-password" placeholder="Creá una contraseña"></label><label>Club<select id="registerClub"><option value="">Seleccioná tu club</option></select></label><button class="primary" id="playerRegister">REGISTRARME</button><p id="registerMessage" class="muted"></p></div></div><p class="security-note">Versión de prueba: las cuentas se guardan solamente en este navegador. Para habilitar acceso real desde distintos dispositivos y recibir solicitudes automáticamente, hay que conectar una base de datos y autenticación online.</p></div><div id="accountLoggedIn" hidden><h3>SESIÓN INICIADA</h3><p id="welcomeAccount" class="muted"></p><button class="danger-btn" id="playerLogout">CERRAR SESIÓN</button></div></div></section>
+
+<section class="page" id="page-admin"><div class="section-heading"><div><span class="eyebrow">CONTROL DEL SISTEMA</span><h2>PANEL ADMINISTRADOR 🔒</h2></div></div><div class="panel admin-panel"><p class="muted">Panel de demostración. Clave: <b>iron-demo</b>. Los cambios se guardan en este navegador; para uso real se conectará una base de datos y autenticación segura.</p><label>Clave de demostración<input id="adminPass" type="password" placeholder="Ingresar clave"></label><button class="primary" id="adminLogin">INGRESAR</button><p id="adminMsg" class="muted"></p>
+<div id="adminSettings" class="admin-settings" hidden>
+<div class="admin-divider"></div><div class="admin-tabs"><button class="admin-tab active" data-admin-tab="evento">Evento</button><button class="admin-tab" data-admin-tab="clubes">Clubes</button><button class="admin-tab" data-admin-tab="jugadores">Jugadores</button><button class="admin-tab" data-admin-tab="solicitudes">Solicitudes</button><button class="admin-tab" data-admin-tab="dinero">Presupuestos</button><button class="admin-tab" data-admin-tab="noticias">Noticias</button></div>
+<div class="admin-view active" id="admin-evento"><h3>EVENTO Y FECHA LÍMITE</h3><label>Nombre del evento<input id="eventNameInput" maxlength="45" placeholder="Temporada 2 / Copa Iron"></label><label>Fecha y hora de cierre<input id="deadlineInput" type="datetime-local"></label><button class="primary" id="saveEventName">GUARDAR EVENTO</button><p id="eventSaveMsg" class="muted"></p></div>
+<div class="admin-view" id="admin-clubes"><h3>GESTIÓN DE CLUBES Y ESCUDOS</h3><p class="muted">Desde acá podés agregar equipos o eliminarlos de la lista de la liga.</p><label>Nombre del equipo<input id="clubNameInput" placeholder="Nombre del club"></label><label>Escudo del equipo<input id="clubLogoInput" type="file" accept="image/*"></label><button class="primary" id="addClub">AGREGAR EQUIPO</button><div id="adminClubList" class="admin-list"></div></div>
+<div class="admin-view" id="admin-jugadores"><h3>GESTIÓN DE JUGADORES</h3><label>Jugador<input id="playerNameInput" placeholder="Nombre del jugador"></label><label>Club<select id="playerClubInput"></select></label><label>Posición<input id="playerPositionInput" placeholder="Ej.: DC"></label><details class="stats-editor"><summary>ESTADÍSTICAS PES 6 (OPCIONAL)</summary><div class="stats-input-grid"><label>Ataque<input class="player-stat-input" data-stat="attack" type="number" min="1" max="99" placeholder="1–99"></label><label>Defensa<input class="player-stat-input" data-stat="defence" type="number" min="1" max="99" placeholder="1–99"></label><label>Equilibrio<input class="player-stat-input" data-stat="balance" type="number" min="1" max="99" placeholder="1–99"></label><label>Resistencia<input class="player-stat-input" data-stat="stamina" type="number" min="1" max="99" placeholder="1–99"></label><label>Velocidad máxima<input class="player-stat-input" data-stat="topSpeed" type="number" min="1" max="99" placeholder="1–99"></label><label>Aceleración<input class="player-stat-input" data-stat="acceleration" type="number" min="1" max="99" placeholder="1–99"></label><label>Respuesta<input class="player-stat-input" data-stat="response" type="number" min="1" max="99" placeholder="1–99"></label><label>Agilidad<input class="player-stat-input" data-stat="agility" type="number" min="1" max="99" placeholder="1–99"></label><label>Precisión de regate<input class="player-stat-input" data-stat="dribbleAccuracy" type="number" min="1" max="99" placeholder="1–99"></label><label>Velocidad de regate<input class="player-stat-input" data-stat="dribbleSpeed" type="number" min="1" max="99" placeholder="1–99"></label><label>Precisión pase corto<input class="player-stat-input" data-stat="shortPassAccuracy" type="number" min="1" max="99" placeholder="1–99"></label><label>Velocidad pase corto<input class="player-stat-input" data-stat="shortPassSpeed" type="number" min="1" max="99" placeholder="1–99"></label><label>Precisión pase largo<input class="player-stat-input" data-stat="longPassAccuracy" type="number" min="1" max="99" placeholder="1–99"></label><label>Velocidad pase largo<input class="player-stat-input" data-stat="longPassSpeed" type="number" min="1" max="99" placeholder="1–99"></label><label>Precisión de tiro<input class="player-stat-input" data-stat="shotAccuracy" type="number" min="1" max="99" placeholder="1–99"></label><label>Potencia de tiro<input class="player-stat-input" data-stat="shotPower" type="number" min="1" max="99" placeholder="1–99"></label><label>Técnica de tiro<input class="player-stat-input" data-stat="shotTechnique" type="number" min="1" max="99" placeholder="1–99"></label><label>Precisión de falta<input class="player-stat-input" data-stat="freeKick" type="number" min="1" max="99" placeholder="1–99"></label><label>Efecto<input class="player-stat-input" data-stat="curl" type="number" min="1" max="99" placeholder="1–99"></label><label>Cabeceo<input class="player-stat-input" data-stat="header" type="number" min="1" max="99" placeholder="1–99"></label><label>Salto<input class="player-stat-input" data-stat="jump" type="number" min="1" max="99" placeholder="1–99"></label><label>Técnica<input class="player-stat-input" data-stat="technique" type="number" min="1" max="99" placeholder="1–99"></label><label>Agresividad<input class="player-stat-input" data-stat="aggression" type="number" min="1" max="99" placeholder="1–99"></label><label>Mentalidad<input class="player-stat-input" data-stat="mentality" type="number" min="1" max="99" placeholder="1–99"></label><label>Habilidad portero<input class="player-stat-input" data-stat="goalkeeping" type="number" min="1" max="99" placeholder="1–99"></label><label>Trabajo en equipo<input class="player-stat-input" data-stat="teamwork" type="number" min="1" max="99" placeholder="1–99"></label></div></details><button class="primary" id="addPlayer">AGREGAR JUGADOR</button><div id="adminPlayerList" class="admin-list"></div></div>
+<div class="admin-view" id="admin-solicitudes"><h3>SOLICITUDES Y OPERACIONES</h3><p class="muted">Bandeja de control para solicitudes de clubes y movimientos del mercado.</p><div id="requestsList" class="admin-list"></div><h3>REGISTRAR SOLICITUD DE PRUEBA</h3><label>Tipo<select id="requestType"><option>Solicitud de club</option><option>Compra de jugador</option><option>Venta de jugador</option><option>Préstamo</option><option>Intercambio</option></select></label><label>Detalle<input id="requestDetail" placeholder="Usuario, club y operación"></label><button class="primary" id="addRequest">AGREGAR A LA BANDEJA</button></div>
+<div class="admin-view" id="admin-dinero"><h3>GESTIÓN DE PRESUPUESTOS</h3><label>Club<select id="moneyClub"></select></label><label>Acción<select id="moneyAction"><option value="add">Dar dinero</option><option value="remove">Quitar dinero</option></select></label><label>Monto<input id="moneyAmount" type="number" min="1" placeholder="Ej.: 5000"></label><label>Motivo<input id="moneyReason" placeholder="Premio, sanción, ajuste..."></label><button class="primary" id="applyMoney">REGISTRAR MOVIMIENTO</button><p id="moneyMsg" class="muted"></p><div id="budgetList" class="admin-list"></div></div>
+<div class="admin-view" id="admin-noticias"><h3>PUBLICAR / EDITAR NOTICIA</h3><p class="muted">Las publicaciones aparecen en Inicio, debajo del título del mercado. Los jugadores solo pueden leerlas.</p><input id="newsEditIndex" type="hidden" value=""><div id="newsFormMode" class="muted"></div><label>Título<input id="newsTitle" placeholder="Título de la noticia"></label><label>Contenido<textarea id="newsBody" class="notes" placeholder="Escribí la noticia..."></textarea></label><label>Imagen (opcional)<input id="newsImage" type="file" accept="image/*"></label><button class="primary" id="publishNews">PUBLICAR NOTICIA</button><div id="adminNewsList" class="admin-list"></div></div>
+</div></div></section>
+<div class="detail-modal" id="detailModal" aria-hidden="true"><div class="detail-backdrop" data-close-modal></div><section class="detail-dialog" role="dialog" aria-modal="true" aria-labelledby="detailTitle"><button class="detail-close" data-close-modal aria-label="Cerrar">×</button><div id="detailContent"></div></section></div></main>
+<footer><span>COLOSO LEAGUE</span><i></i><span>MERCADO OFICIAL</span><small>MERCADO OFICIAL · COMUNIDAD PES 6</small></footer>
+<script src="app.js"></script>
+</body></html>
